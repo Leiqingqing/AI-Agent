@@ -1,5 +1,2 @@
-node_modules
-dist
-.vscode
-.DS_Store
-*.local
+/node_modules
+/.env.local
