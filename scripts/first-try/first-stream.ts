@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
 import { ChatOpenAI } from '@langchain/openai'
 
-dotenv.config({ path: new URL('../.env.local', import.meta.url) })
+dotenv.config({ path: new URL('../../.env.local', import.meta.url) })
 
 const model = new ChatOpenAI({
   apiKey: process.env.DEEPSEEK_API_KEY,

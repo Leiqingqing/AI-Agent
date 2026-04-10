@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import { createAgent } from 'langchain'
 import { ChatOpenAI } from '@langchain/openai'
 
-dotenv.config({ path: new URL('../.env.ds', import.meta.url) })
+dotenv.config({ path: new URL('../../.env.ds', import.meta.url) })
 
 const model = new ChatOpenAI({
   apiKey: process.env.DEEPSEEK_API_KEY,
@@ -22,7 +22,7 @@ const agent = createAgent({
 // 定义 message
 const inputMessages = {
   role: 'user',
-  content: '请用一句话说明当前是 Agent 流式调用验证。',
+  content: '请用一句话说明当前是 Agent 流式调用验证。并且说明一下你的身份。',
 }
 
 // Agent 调用 stream 流式输出，返回的是消息流
@@ -37,7 +37,9 @@ process.stdout.write('agent stream result:\n')
 
 for await (const [messageChunk] of stream) {
   if (messageChunk.content) {
-    process.stdout.write(messageChunk.text)
+    setTimeout(() => {
+      process.stdout.write(messageChunk.text)
+    }, 20)
   }
 }
 

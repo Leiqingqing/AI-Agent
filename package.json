@@ -4,9 +4,8 @@
 "type": "module",
 "packageManager": "npm@11.6.2",
   "scripts": {
-    "first-call": "tsx scripts/first-call.ts",
-    "first-stream": "tsx scripts/first-stream.ts",
-    "first-agent": "tsx scripts/first-agent.ts"
+    "first-try": "tsx scripts/first-try/proxy-test.ts",
+    "promo-test": "tsx scripts/promoTemplate/chatProptTempWithHistory.ts"
   },
   "dependencies": {
     "@langchain/core": "^1.1.36",
