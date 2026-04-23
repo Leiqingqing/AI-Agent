@@ -4,8 +4,8 @@
 "type": "module",
 "packageManager": "npm@11.6.2",
   "scripts": {
-    "first-try": "tsx scripts/first-try/proxy-test.ts",
-    "promo-test": "tsx scripts/promoTemplate/chatProptTempWithHistory.ts"
+    "chat:invoke": "tsx scripts/first-try/chatInvoke.ts",
+    "chat:stream": "tsx scripts/first-try/chatStream.ts"
   },
   "dependencies": {
     "@langchain/core": "^1.1.36",

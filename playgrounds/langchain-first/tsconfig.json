@@ -10,6 +10,6 @@
         "types": ["node"]
         
     },
-    "include": ["src/**/*.ts", "scripts/**/*.ts"],
+    "include": ["**/*.ts"],
     "exclude": ["node_modules", "dist"]
 }
