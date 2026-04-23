@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 
-import { HumanMessage, SystemMessage } from "@langchain/core/messages";
 import { ChatOpenAI } from "@langchain/openai";
 
 dotenv.config({ path: ".env.ds" });
@@ -30,8 +29,8 @@ async function main() {
   });
 
   const response = await chatModel.invoke([
-    new SystemMessage("You are a concise coding assistant."),
-    new HumanMessage("Please introduce yourself in one short sentence."),
+      { role: "system", content: "You are a concise coding assistant." },
+      { role: "user", content: "Please introduce yourself in one short sentence." }
   ]);
 
   console.log("Provider: DeepSeek");
