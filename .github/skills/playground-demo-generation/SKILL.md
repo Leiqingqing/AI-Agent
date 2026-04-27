@@ -27,6 +27,11 @@ const agent = createAgent({ ... });
 ```
 
 7. If the demo prints model output, use streaming output consistently.
+8. If the demo teaches `ChatPromptTemplate` or `MessagesPlaceholder`, prefer concise structured message content.
+9. When message roles and fields already express the meaning, do not add extra helper text for the model such as `请基于这些变量理解消息`, `请自然理解这些信息`, or `这是用户的背景信息`.
+10. For single-field message templates, prefer direct variable insertion such as `{input}` and `{output}` instead of redundant labels like `文本：{input}`.
+11. When combining few-shot chat prompts with `ChatPromptTemplate`, prefer inserting the few-shot prompt directly in the prompt structure when the runtime supports it, instead of wrapping it in an extra `MessagesPlaceholder` only for composition.
+12. When writing role-based messages in demos, prefer `user`, `assistant`, `system`, and `tool` so the examples stay aligned with common model role naming.
 
 ## Naming Procedure
 
@@ -44,6 +49,20 @@ const agent = createAgent({ ... });
 5. Pass user input through the agent.
 6. Stream the response and print chunks progressively.
 7. Reuse existing helper patterns from nearby playground scripts instead of introducing a new style.
+8. For prompt-template demos, show the raw structured messages produced by the template.
+9. For prompt-template demos, keep message text as simple as the context allows: use direct variables like `{input}` for single-field messages, and keep field labels only when multiple fields need disambiguation, such as `姓名：{name}` and `场景：{scene}`.
+10. When calling `formatMessages(...)`, write the input object in the same reading order as the prompt structure when practical, even though output order is still determined by the prompt nodes.
+
+## Prompt Template Guidance
+
+- Use roles and message ordering to express conversation structure.
+- Prefer `user`, `assistant`, `system`, and `tool` as role names in examples.
+- Use fields to carry meaning inside each message only when they add necessary structure.
+- Prefer direct variables such as `{input}` and `{output}` for single-field messages.
+- Prefer concise structured content such as `姓名：{name}`、`昵称：{nickname}`、`场景：{scene}` when multiple fields appear in one message.
+- Avoid wrapping structured fields with extra instructional prose when the structure is already clear.
+- When demonstrating `MessagesPlaceholder`, show the placeholder inserted between surrounding messages instead of compensating with explanatory filler text.
+- When demonstrating few-shot chat prompts, prefer placing the few-shot prompt directly in the chat prompt sequence if that is what the runtime actually executes.
 
 ## TypeScript Template
 
@@ -84,7 +103,7 @@ async function main() {
   const agent = createAgent({
     model: chatModel,
     tools: [],
-    systemPrompt: "You are a concise assistant.",
+    systemPrompt: "你是一名温和、克制、说话自然的陪伴助手。",
   });
 
   const stream = await agent.stream(
@@ -119,3 +138,4 @@ main().catch((error) => {
 - The filename does not rely on the word `demo` as its main identifier.
 - Model invocation uses `createAgent()`.
 - Output is streamed instead of using a single non-streaming invoke for the final response.
+- Prompt-template examples keep single-field messages minimal and only use field labels where they improve clarity.

@@ -5,7 +5,9 @@
 "packageManager": "npm@11.6.2",
   "scripts": {
     "agent:stream": "tsx scripts/first-try/agentStream.ts",
+    "agent:few-shot-walkthrough": "tsx scripts/first-try/fewShotWalkthrough.ts",
     "agent:message-input-styles": "tsx scripts/first-try/messageInputStyles.ts",
+    "agent:prompt-template-walkthrough": "tsx scripts/first-try/promptTemplateWalkthrough.ts",
     "chat:invoke": "tsx scripts/first-try/chatInvoke.ts",
     "chat:stream": "tsx scripts/first-try/chatStream.ts"
   },
