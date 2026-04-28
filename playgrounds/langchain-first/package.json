@@ -8,6 +8,8 @@
     "agent:few-shot-walkthrough": "tsx scripts/first-try/fewShotWalkthrough.ts",
     "agent:message-input-styles": "tsx scripts/first-try/messageInputStyles.ts",
     "agent:prompt-template-walkthrough": "tsx scripts/first-try/promptTemplateWalkthrough.ts",
+    "agent:runnable-priority": "tsx scripts/first-try/runnablePriorityAgent.ts",
+    "agent:runnable-parallel-compare": "tsx scripts/first-try/runnableParallelComparison.ts",
     "chat:invoke": "tsx scripts/first-try/chatInvoke.ts",
     "chat:stream": "tsx scripts/first-try/chatStream.ts",
     "parser:json-output-emotion": "tsx scripts/first-try/jsonOutputParserEmotion.ts",
