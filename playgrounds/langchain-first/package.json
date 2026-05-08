@@ -14,6 +14,8 @@
       "agent:runnable-priority": "tsx scripts/first-try/runnablePriorityAgent.ts",
       "agent:runnable-parallel-compare": "tsx scripts/first-try/runnableParallelComparison.ts",
       "agent:manual-weather-tool": "tsx scripts/first-try/manualWeatherToolCall.ts",
+      "trace:emotion-weather": "tsx scripts/first-try/emotionWeatherTrace.ts",
+      "trace:agent-stream": "tsx scripts/first-try/traceAgentStream.ts",
       "chat:invoke": "tsx scripts/first-try/chatInvoke.ts",
       "chat:stream": "tsx scripts/first-try/chatStream.ts",
         "docs:embed-search-readme": "tsx scripts/first-try/readmeVectorSearch.ts",
