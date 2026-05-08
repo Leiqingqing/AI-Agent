@@ -1,3 +1,5 @@
 **/node_modules
-/.env.local
-/.env.ds
+**/.env.local
+**/.env.ds
+playgrounds/langchain-first/.env.ds
+**/traces/
