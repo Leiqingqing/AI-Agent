@@ -21,7 +21,9 @@
     "docs:embed-search-readme": "tsx langchain-first/scripts/first-try/readmeVectorSearch.ts",
     "docs:split-readme": "tsx langchain-first/scripts/first-try/documentSplitReadme.ts",
     "parser:json-output-emotion": "tsx langchain-first/scripts/first-try/jsonOutputParserEmotion.ts",
-    "parser:structured-output-compare": "tsx langchain-first/scripts/first-try/structuredOutputComparison.ts"
+    "parser:structured-output-compare": "tsx langchain-first/scripts/first-try/structuredOutputComparison.ts",
+    "langgraph:emotion-route": "tsx langraph/emotionRoute.ts",
+    "langgraph:schema-state-reducers": "tsx langraph/schemaStateReducers.ts"
   },
   "dependencies": {
     "@langchain/classic": "^1.0.32",
