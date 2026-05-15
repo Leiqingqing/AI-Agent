@@ -1,0 +1,8 @@
+{
+    "name": "@ai-agent/web",
+    "version": "1.0.0",
+    "main": "src/index.js",
+    "dependencies": {   
+        "@ai-agent/shareds": "workspace:*"
+    }
+}
