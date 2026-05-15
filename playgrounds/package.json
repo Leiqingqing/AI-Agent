@@ -24,7 +24,11 @@
     "parser:structured-output-compare": "tsx langchain-first/scripts/first-try/structuredOutputComparison.ts",
     "langgraph:emotion-route": "tsx langraph/emotionRoute.ts",
     "langgraph:schema-state-reducers": "tsx langraph/schemaStateReducers.ts",
-    "langgraph:emotion-tool-workflow": "tsx langraph/emotionToolWorkflow.ts"
+    "langgraph:emotion-tool-workflow": "tsx langraph/emotionToolWorkflow.ts",
+    "langgraph:emotion-checkpoint-stream": "tsx langraph/emotionCheckpointStream.ts",
+    "langgraph:weather-send-fanout": "tsx langraph/weatherSendFanout.ts",
+    "langgraph:weather-command-send-fanout": "tsx langraph/weatherCommandSendFanout.ts",
+    "langgraph:manuscript-approval-flow": "tsx langraph/manuscriptApprovalFlow.ts"
   },
   "dependencies": {
     "@langchain/classic": "^1.0.32",
