@@ -1,8 +1,15 @@
 {
-    "name": "@ai-agent/api",
-    "version": "1.0.0",
-    "main": "src/index.js",
-    "dependencies": {   
-        "@ai-agent/shareds": "workspace:*"
-    }
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "hono": "^4.12.19"
+  },
+  "devDependencies": {
+    "wrangler": "^4.4.0"
+  }
 }
