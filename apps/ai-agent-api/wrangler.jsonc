@@ -1,0 +1,19 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "ai-agent-api",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-05-19",
+	"kv_namespaces": [
+		{
+			"binding": "USER_KV",
+			"id": "568aef874b9348c7b054e6ddc299a26d"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "user_d1",
+			"database_id": "21ce4ae8-dd67-4cc8-9e31-e40397ac8a4c"
+		}
+	]
+}

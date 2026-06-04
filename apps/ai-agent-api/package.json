@@ -1,0 +1,19 @@
+{
+  "name": "ai-agent-api",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.19",
+    "zod": "^3.25.76",
+    "@hono/zod-validator": "0.8.0"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10",
+    "wrangler": "^4.4.0"
+  }
+}
