@@ -1,19 +1,33 @@
 {
-	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "api",
-	"main": "src/index.ts",
-	"compatibility_date": "2026-05-19",
-	"kv_namespaces": [
-		{
-			"binding": "MY_KV",
-			"id": "a9c3633bcda247779ce8c43cf87e8afa"
-		}
-	],
-	"d1_databases": [
-		{
-			"binding": "MY_DB",
-			"database_name": "MY_DB",
-			"database_id": "848c7945-bba7-49f6-8f07-fc9f6369e408"
-		}
-	]
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "api",
+    "main": "src/index.ts",
+    "compatibility_date": "2026-05-19",
+    "durable_objects": {
+        "bindings": [
+            {
+                "name": "MEETING_CHAT_ROOMS",
+                "class_name": "MeetingChatRoom"
+            }
+        ]
+    },
+    "migrations": [
+        {
+            "tag": "v1",
+            "new_classes": ["MeetingChatRoom"]
+        }
+    ],
+    "kv_namespaces": [
+        {
+            "binding": "MY_KV",
+            "id": "a9c3633bcda247779ce8c43cf87e8afa"
+        }
+    ],
+    "d1_databases": [
+        {
+            "binding": "MY_DB",
+            "database_name": "MY_DB",
+            "database_id": "848c7945-bba7-49f6-8f07-fc9f6369e408"
+        }
+    ]
 }

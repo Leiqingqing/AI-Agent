@@ -5,6 +5,8 @@ import authRoutes from "./auth";
 import databaseRoutes from "./database";
 import errorHandleRoutes from "./errorHandle";
 import middlewareRoutes from "./middleware";
+import realtimeRoutes from "./realtime";
+import { MeetingChatRoom } from "./realtime/meetingRoomChat";
 
 const app = new Hono()
 
@@ -12,6 +14,7 @@ app.route("/auth", authRoutes);
 app.route("/database", databaseRoutes);
 app.route("/middleware", middlewareRoutes);
 app.route("/error-handle", errorHandleRoutes);
+app.route("/realtime", realtimeRoutes);
 
 app.onError((error, c) => {
     if (error instanceof HTTPException) {
@@ -90,3 +93,4 @@ app.post('/api/users', async (c) => {
 
 
 export default app
+export { MeetingChatRoom };
