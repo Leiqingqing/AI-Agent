@@ -22,6 +22,7 @@
     "docs:split-readme": "tsx langchain-first/scripts/first-try/documentSplitReadme.ts",
     "parser:json-output-emotion": "tsx langchain-first/scripts/first-try/jsonOutputParserEmotion.ts",
     "parser:structured-output-compare": "tsx langchain-first/scripts/first-try/structuredOutputComparison.ts",
+    "zod:parse-inspection": "tsx zod/scripts/parseInspection.ts",
     "langgraph:emotion-route": "tsx langraph/emotionRoute.ts",
     "langgraph:schema-state-reducers": "tsx langraph/schemaStateReducers.ts",
     "langgraph:emotion-tool-workflow": "tsx langraph/emotionToolWorkflow.ts",
