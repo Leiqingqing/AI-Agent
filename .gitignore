@@ -1,4 +1,5 @@
 **/node_modules
+**/dist
 **/.env.local
 **/.env.ds
 playgrounds/langchain-first/.env.ds

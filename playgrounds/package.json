@@ -4,6 +4,8 @@
   "type": "module",
   "packageManager": "npm@11.6.2",
   "scripts": {
+    "viewbox:dev": "npm --prefix viewbox run dev",
+    "viewbox:build": "npm --prefix viewbox run build",
     "agent:stream": "tsx langchain-first/scripts/first-try/agentStream.ts",
     "agent:few-shot-walkthrough": "tsx langchain-first/scripts/first-try/fewShotWalkthrough.ts",
     "agent:message-input-styles": "tsx langchain-first/scripts/first-try/messageInputStyles.ts",
