@@ -150,9 +150,9 @@ h1 {
   margin-bottom: 0;
 }
 
-.card-grid {
+.demo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
@@ -166,6 +166,11 @@ h1 {
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
 }
 
+.demo-card-live {
+  grid-column: 1 / -1;
+  gap: 18px;
+}
+
 .demo-card:hover {
   transform: translateY(-4px);
   border-color: rgba(240, 161, 125, 0.42);
@@ -176,9 +181,107 @@ h1 {
   color: #ffca99;
 }
 
+.demo-status-live {
+  color: #9be7c4;
+}
+
 .demo-card h3 {
   font-size: 1.35rem;
   margin: 18px 0 10px;
+}
+
+.demo-card-head,
+.stream-box-head,
+.prompt-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.demo-model,
+.demo-copy,
+.prompt-label,
+.stream-box-head {
+  color: rgba(245, 239, 230, 0.68);
+}
+
+.demo-model {
+  margin-bottom: 0;
+  font-size: 0.92rem;
+}
+
+.demo-copy {
+  margin-bottom: 0;
+}
+
+.prompt-form {
+  display: grid;
+  gap: 12px;
+}
+
+.prompt-label {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.prompt-input,
+.stream-box {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.prompt-input {
+  width: 100%;
+  resize: vertical;
+  min-height: 120px;
+  padding: 16px;
+  color: inherit;
+  font: inherit;
+}
+
+.prompt-button {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: #f0a17d;
+  color: #1b130d;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.prompt-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.prompt-button-ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: #f5efe6;
+}
+
+.stream-box {
+  overflow: hidden;
+}
+
+.stream-box-head {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.stream-box-body {
+  margin: 0;
+  padding: 18px 16px;
+  min-height: 180px;
+  white-space: pre-wrap;
+  font-family: "IBM Plex Mono", "Consolas", monospace;
+  color: rgba(245, 239, 230, 0.92);
 }
 
 @media (max-width: 720px) {
@@ -201,6 +304,13 @@ h1 {
   }
 
   .panel-header {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .demo-card-head,
+  .stream-box-head,
+  .prompt-actions {
     align-items: start;
     flex-direction: column;
   }
